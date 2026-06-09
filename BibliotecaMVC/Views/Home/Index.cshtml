@@ -1,8 +1,69 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Início";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<section class="bg-dark text-white py-5">
+    <div class="container text-center py-4">
+        <i class="bi bi-book-half display-1 mb-3 text-warning"></i>
+        <h1 class="display-4 fw-bold">Biblioteca Municipal</h1>
+        <p class="lead mt-3">Um espaço de conhecimento, cultura e aprendizado para toda a comunidade.</p>
+        <a asp-controller="Home" asp-action="Acervo" class="btn btn-warning btn-lg mt-3 me-2">
+            <i class="bi bi-search me-2"></i>Ver Acervo
+        </a>
+        <a asp-controller="Home" asp-action="Contato" class="btn btn-outline-light btn-lg mt-3">
+            <i class="bi bi-envelope me-2"></i>Contato
+        </a>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">O que oferecemos</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm text-center p-3">
+                    <div class="card-body">
+                        <i class="bi bi-journals display-4 text-primary mb-3"></i>
+                        <h5 class="card-title">Acervo Variado</h5>
+                        <p class="card-text">Milhares de títulos entre literatura, ciência, história e muito mais.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm text-center p-3">
+                    <div class="card-body">
+                        <i class="bi bi-people display-4 text-success mb-3"></i>
+                        <h5 class="card-title">Para Todos</h5>
+                        <p class="card-text">Atendemos crianças, jovens e adultos com espaços dedicados a cada faixa etária.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm text-center p-3">
+                    <div class="card-body">
+                        <i class="bi bi-calendar-event display-4 text-warning mb-3"></i>
+                        <h5 class="card-title">Eventos Culturais</h5>
+                        <p class="card-text">Saraus, contação de histórias, exposições e oficinas ao longo do ano.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-light py-5">
+    <div class="container text-center">
+        <h2 class="mb-4">Horário de Funcionamento</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr><td>Segunda a Sexta</td><td><strong>08h às 18h</strong></td></tr>
+                        <tr><td>Sábado</td><td><strong>09h às 13h</strong></td></tr>
+                        <tr><td>Domingo e Feriados</td><td><strong>Fechado</strong></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
