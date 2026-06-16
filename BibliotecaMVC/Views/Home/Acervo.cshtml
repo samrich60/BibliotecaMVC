@@ -1,0 +1,168 @@
+﻿@{
+    ViewData["Title"] = "Acervo";
+}
+
+<!-- HERO -->
+<section class="bg-dark text-white py-5">
+    <div class="container text-center py-3">
+        <i class="bi bi-journals display-2 mb-3"></i>
+        <h1 class="display-5 fw-bold">Nosso Acervo</h1>
+        <p class="lead">Explore nossa coleção de livros disponíveis para empréstimo</p>
+    </div>
+</section>
+
+<!-- BARRA DE BUSCA -->
+<section class="py-4 bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="input-group shadow-sm">
+                    <span class="input-group-text bg-white">
+                        <i class="bi bi-search"></i>
+                    </span>
+                    <input type="text" class="form-control" placeholder="Buscar por título, autor ou categoria..." />
+                    <button class="btn btn-dark">Buscar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CATEGORIAS -->
+<section class="py-4">
+    <div class="container">
+        <h5 class="mb-3">Filtrar por categoria:</h5>
+        <div class="d-flex flex-wrap gap-2">
+            <a href="#" class="btn btn-dark btn-sm">Todos</a>
+            <a href="#" class="btn btn-outline-dark btn-sm">Literatura</a>
+            <a href="#" class="btn btn-outline-dark btn-sm">Ciências</a>
+            <a href="#" class="btn btn-outline-dark btn-sm">História</a>
+            <a href="#" class="btn btn-outline-dark btn-sm">Tecnologia</a>
+            <a href="#" class="btn btn-outline-dark btn-sm">Infantil</a>
+            <a href="#" class="btn btn-outline-dark btn-sm">Filosofia</a>
+        </div>
+    </div>
+</section>
+
+<!-- LISTAGEM DE LIVROS -->
+<section class="pb-5">
+    <div class="container">
+        <div class="row g-4">
+
+            <!-- Card Livro 1 -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                        <span class="badge bg-white text-primary">Literatura</span>
+                        <span class="badge bg-success">Disponível</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Dom Casmurro</h5>
+                        <p class="text-muted mb-1"><i class="bi bi-person me-1"></i>Machado de Assis</p>
+                        <p class="text-muted mb-2"><i class="bi bi-calendar me-1"></i>1899</p>
+                        <p class="card-text small">Um dos maiores clássicos da literatura brasileira, narrado pelo enigmático Bentinho.</p>
+                    </div>
+                    <div class="card-footer bg-white">
+                        <small class="text-muted">ISBN: 978-85-0000-001-1</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Livro 2 -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-success text-white d-flex justify-content-between align-items-center">
+                        <span class="badge bg-white text-success">Ciências</span>
+                        <span class="badge bg-success">Disponível</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Uma Breve História do Tempo</h5>
+                        <p class="text-muted mb-1"><i class="bi bi-person me-1"></i>Stephen Hawking</p>
+                        <p class="text-muted mb-2"><i class="bi bi-calendar me-1"></i>1988</p>
+                        <p class="card-text small">Uma jornada pelo universo explicada de forma acessível pelo gênio Stephen Hawking.</p>
+                    </div>
+                    <div class="card-footer bg-white">
+                        <small class="text-muted">ISBN: 978-85-0000-002-2</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Livro 3 -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-warning text-dark d-flex justify-content-between align-items-center">
+                        <span class="badge bg-white text-warning">Infantil</span>
+                        <span class="badge bg-danger">Emprestado</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">O Pequeno Príncipe</h5>
+                        <p class="text-muted mb-1"><i class="bi bi-person me-1"></i>Antoine de Saint-Exupéry</p>
+                        <p class="text-muted mb-2"><i class="bi bi-calendar me-1"></i>1943</p>
+                        <p class="card-text small">Um conto poético e filosófico sobre amizade, amor e os mistérios da vida.</p>
+                    </div>
+                    <div class="card-footer bg-white">
+                        <small class="text-muted">ISBN: 978-85-0000-003-3</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Livro 4 -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-danger text-white d-flex justify-content-between align-items-center">
+                        <span class="badge bg-white text-danger">História</span>
+                        <span class="badge bg-success">Disponível</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Sapiens</h5>
+                        <p class="text-muted mb-1"><i class="bi bi-person me-1"></i>Yuval Noah Harari</p>
+                        <p class="text-muted mb-2"><i class="bi bi-calendar me-1"></i>2011</p>
+                        <p class="card-text small">Uma fascinante narrativa da história da humanidade desde a pré-história até os dias atuais.</p>
+                    </div>
+                    <div class="card-footer bg-white">
+                        <small class="text-muted">ISBN: 978-85-0000-004-4</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Livro 5 -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-info text-white d-flex justify-content-between align-items-center">
+                        <span class="badge bg-white text-info">Tecnologia</span>
+                        <span class="badge bg-success">Disponível</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Código Limpo</h5>
+                        <p class="text-muted mb-1"><i class="bi bi-person me-1"></i>Robert C. Martin</p>
+                        <p class="text-muted mb-2"><i class="bi bi-calendar me-1"></i>2008</p>
+                        <p class="card-text small">Guia essencial para desenvolvedores que desejam escrever código legível e sustentável.</p>
+                    </div>
+                    <div class="card-footer bg-white">
+                        <small class="text-muted">ISBN: 978-85-0000-005-5</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Livro 6 -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-secondary text-white d-flex justify-content-between align-items-center">
+                        <span class="badge bg-white text-secondary">Filosofia</span>
+                        <span class="badge bg-danger">Emprestado</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">A República</h5>
+                        <p class="text-muted mb-1"><i class="bi bi-person me-1"></i>Platão</p>
+                        <p class="text-muted mb-2"><i class="bi bi-calendar me-1"></i>380 a.C.</p>
+                        <p class="card-text small">Obra fundamental da filosofia ocidental que discute justiça, política e a natureza da alma.</p>
+                    </div>
+                    <div class="card-footer bg-white">
+                        <small class="text-muted">ISBN: 978-85-0000-006-6</small>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

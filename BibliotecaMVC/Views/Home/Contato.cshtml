@@ -1,0 +1,102 @@
+﻿@{
+    ViewData["Title"] = "Contato";
+}
+
+<!-- HERO -->
+<section class="bg-dark text-white py-5">
+    <div class="container text-center py-3">
+        <i class="bi bi-envelope display-2 mb-3"></i>
+        <h1 class="display-5 fw-bold">Entre em Contato</h1>
+        <p class="lead">Estamos aqui para ajudar você</p>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row g-5">
+
+            <!-- FORMULÁRIO -->
+            <div class="col-md-7">
+                <h3 class="mb-4">Envie uma mensagem</h3>
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Nome completo</label>
+                        <input type="text" class="form-control" placeholder="Seu nome" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">E-mail</label>
+                        <input type="email" class="form-control" placeholder="seu@email.com" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Assunto</label>
+                        <select class="form-select">
+                            <option value="">Selecione um assunto</option>
+                            <option>Empréstimo de livro</option>
+                            <option>Cadastro de usuário</option>
+                            <option>Doação de livros</option>
+                            <option>Eventos e atividades</option>
+                            <option>Outro</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Mensagem</label>
+                        <textarea class="form-control" rows="5" placeholder="Escreva sua mensagem aqui..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-dark btn-lg w-100">
+                        <i class="bi bi-send me-2"></i>Enviar Mensagem
+                    </button>
+                </form>
+            </div>
+
+            <!-- INFORMAÇÕES -->
+            <div class="col-md-5">
+                <h3 class="mb-4">Informações</h3>
+
+                <div class="card border-0 shadow-sm mb-3">
+                    <div class="card-body d-flex align-items-start gap-3">
+                        <i class="bi bi-geo-alt-fill text-danger fs-3"></i>
+                        <div>
+                            <h6 class="mb-1">Endereço</h6>
+                            <p class="mb-0 text-muted">Rua Getulio Vargas, Quadra 223 — Centro<br />Ocidental - GO</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card border-0 shadow-sm mb-3">
+                    <div class="card-body d-flex align-items-start gap-3">
+                        <i class="bi bi-telephone-fill text-success fs-3"></i>
+                        <div>
+                            <h6 class="mb-1">Telefone</h6>
+                            <p class="mb-0 text-muted">(61) 99999-9009</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card border-0 shadow-sm mb-3">
+                    <div class="card-body d-flex align-items-start gap-3">
+                        <i class="bi bi-envelope-fill text-primary fs-3"></i>
+                        <div>
+                            <h6 class="mb-1">E-mail</h6>
+                            <p class="mb-0 text-muted">contato@bibliotecamunicipal.com.br</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body d-flex align-items-start gap-3">
+                        <i class="bi bi-clock-fill text-warning fs-3"></i>
+                        <div>
+                            <h6 class="mb-1">Horário de Atendimento</h6>
+                            <p class="mb-0 text-muted">
+                                Seg a Sex: 08h às 18h<br />
+                                Sábado: 09h às 13h<br />
+                                Dom e Feriados: Fechado
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
