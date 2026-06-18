@@ -1,0 +1,79 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="bg-dark text-white py-4">
+    <div class="container d-flex justify-content-between align-items-center">
+        <div>
+            <h2 class="mb-0">
+                <i class="bi bi-speedometer2 me-2"></i>Dashboard
+            </h2>
+            <small class="text-muted">Bem-vindo, @ViewBag.Usuario!</small>
+        </div>
+        <a asp-action="Logout" class="btn btn-outline-light btn-sm">
+            <i class="bi bi-box-arrow-right me-1"></i>Sair
+        </a>
+    </div>
+</div>
+
+<div class="container py-5">
+
+    <!-- CARDS DE RESUMO -->
+    <div class="row g-4 mb-5">
+        <div class="col-md-4">
+            <div class="card border-0 shadow text-center p-4">
+                <i class="bi bi-journals display-4 text-primary mb-2"></i>
+                <h2 class="fw-bold">@ViewBag.TotalLivros</h2>
+                <p class="text-muted mb-0">Total de Livros</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-0 shadow text-center p-4">
+                <i class="bi bi-check-circle display-4 text-success mb-2"></i>
+                <h2 class="fw-bold">@ViewBag.LivrosDisponiveis</h2>
+                <p class="text-muted mb-0">Disponíveis</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-0 shadow text-center p-4">
+                <i class="bi bi-x-circle display-4 text-danger mb-2"></i>
+                <h2 class="fw-bold">@ViewBag.LivrosEmprestados</h2>
+                <p class="text-muted mb-0">Emprestados</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- AÇÕES RÁPIDAS -->
+    <h4 class="mb-4">Ações Rápidas</h4>
+    <div class="row g-4">
+        <div class="col-md-3">
+            <a asp-controller="Livros" asp-action="Index"
+               class="card border-0 shadow text-center p-4 text-decoration-none text-dark h-100">
+                <i class="bi bi-list-ul display-4 text-primary mb-2"></i>
+                <h6>Gerenciar Livros</h6>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a asp-controller="Livros" asp-action="Create"
+               class="card border-0 shadow text-center p-4 text-decoration-none text-dark h-100">
+                <i class="bi bi-plus-circle display-4 text-success mb-2"></i>
+                <h6>Cadastrar Livro</h6>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a asp-controller="Home" asp-action="Acervo"
+               class="card border-0 shadow text-center p-4 text-decoration-none text-dark h-100">
+                <i class="bi bi-eye display-4 text-warning mb-2"></i>
+                <h6>Ver Acervo Público</h6>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a asp-action="Logout"
+               class="card border-0 shadow text-center p-4 text-decoration-none text-dark h-100">
+                <i class="bi bi-box-arrow-right display-4 text-danger mb-2"></i>
+                <h6>Sair do Sistema</h6>
+            </a>
+        </div>
+    </div>
+
+</div>

@@ -10,10 +10,21 @@ namespace BibliotecaMVC.Models
         }
 
         public DbSet<Livro> Livros { get; set; }
+        public DbSet<Admin> Admins { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Dados iniciais para popular o banco
+            // Admin padrão
+            modelBuilder.Entity<Admin>().HasData(
+                new Admin
+                {
+                    Id = 1,
+                    Usuario = "admin",
+                    Senha = "admin123"
+                }
+            );
+
+            // Dados iniciais de livros
             modelBuilder.Entity<Livro>().HasData(
                 new Livro
                 {

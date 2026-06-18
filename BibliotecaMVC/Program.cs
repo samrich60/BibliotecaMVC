@@ -3,16 +3,21 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Adiciona o contexto do banco de dados SQLite
 builder.Services.AddDbContext<BibliotecaContext>(options =>
     options.UseSqlite("Data Source=biblioteca.db"));
 
-// Adiciona MVC
+// Habilita Session
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
-// Garante que o banco é criado e migrado automaticamente
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<BibliotecaContext>();
@@ -29,6 +34,9 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthorization();
+
+// Ativa o uso de Session
+app.UseSession();
 
 app.MapControllerRoute(
     name: "default",
