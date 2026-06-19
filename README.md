@@ -6,11 +6,11 @@ Sistema web desenvolvido com **ASP.NET Core MVC (C#)** para gerenciamento de ace
 
 ## 🚀 Tecnologias Utilizadas
 
-- **C# / ASP.NET Core MVC** — estrutura principal
-- **Entity Framework Core** — ORM para banco de dados
-- **SQLite** — banco de dados local
-- **Bootstrap 5** — estilização e responsividade
-- **Bootstrap Icons** — ícones
+- **C# / ASP.NET Core MVC**
+- **Entity Framework Core** 
+- **SQLite** 
+- **Bootstrap 5** 
+- **Bootstrap Icons** 
 
 ---
 
