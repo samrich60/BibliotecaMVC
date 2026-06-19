@@ -1,22 +1,168 @@
-html {
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
 body {
-  margin-bottom: 60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.navbar {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.navbar-brand {
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: color 0.2s;
+    padding: 0.5rem 1rem !important;
+}
+
+    .nav-link:hover {
+        color: #ffc107 !important;
+    }
+
+section.bg-dark {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%) !important;
+}
+
+    section.bg-dark h1 {
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    }
+
+.card {
+    border-radius: 12px !important;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+    .card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.12) !important;
+    }
+
+.card-header {
+    border-radius: 12px 12px 0 0 !important;
+}
+
+.btn {
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+    .btn:hover {
+        transform: translateY(-1px);
+    }
+
+.btn-dark {
+    background-color: #1a1a2e;
+    border-color: #1a1a2e;
+}
+
+    .btn-dark:hover {
+        background-color: #0f3460;
+        border-color: #0f3460;
+    }
+
+.table th {
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f0f4ff;
+}
+
+.form-control, .form-select {
+    border-radius: 8px;
+    border: 1.5px solid #dee2e6;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+    .form-control:focus, .form-select:focus {
+        border-color: #0f3460;
+        box-shadow: 0 0 0 0.2rem rgba(15, 52, 96, 0.15);
+    }
+
+.input-group-text {
+    border-radius: 8px 0 0 8px;
+    background-color: #f8f9fa;
+    border: 1.5px solid #dee2e6;
+}
+
+.badge {
+    border-radius: 6px;
+    font-weight: 500;
+    padding: 0.4em 0.8em;
+}
+
+footer {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%) !important;
+    border-top: 3px solid #ffc107;
+}
+
+.alert {
+    border-radius: 10px;
+    border: none;
+    font-weight: 500;
+}
+
+.alert-success {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.alert-danger {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+
+body.bg-dark {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%) !important;
+    min-height: 100vh;
+}
+
+.card.shadow-lg {
+    border-radius: 16px !important;
+}
+
+.card a.card {
+    transition: all 0.25s;
+    cursor: pointer;
+}
+
+    .card a.card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.15) !important;
+        background-color: #f0f4ff !important;
+    }
+
+.display-4.fw-bold {
+    font-size: 2.8rem;
+}
+
+@media (max-width: 768px) {
+    section.bg-dark h1 {
+        font-size: 1.8rem;
+    }
+
+    .display-1 {
+        font-size: 3rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+
+    .card-body.p-5 {
+        padding: 2rem !important;
+    }
 }

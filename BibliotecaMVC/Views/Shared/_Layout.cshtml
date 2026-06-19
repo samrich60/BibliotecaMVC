@@ -10,30 +10,39 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold" asp-controller="Home" asp-action="Index">
-                <i class="bi bi-book-half me-2"></i>Biblioteca Municipal
+                <i class="bi bi-book-half me-2 text-warning"></i>Biblioteca Municipal
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
                     <li class="nav-item">
-                        <a class="nav-link" asp-controller="Home" asp-action="Index">Início</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="Index">
+                            <i class="bi bi-house me-1"></i>Início
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-controller="Home" asp-action="Sobre">Sobre</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="Sobre">
+                            <i class="bi bi-info-circle me-1"></i>Sobre
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-controller="Home" asp-action="Acervo">Acervo</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="Acervo">
+                            <i class="bi bi-journals me-1"></i>Acervo
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-controller="Home" asp-action="Contato">Contato</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="Contato">
+                            <i class="bi bi-envelope me-1"></i>Contato
+                        </a>
                     </li>
-                    <li class="nav-item ms-2">
-                        <a class="btn btn-outline-light btn-sm" asp-controller="Admin" asp-action="Login">
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <a class="btn btn-warning btn-sm fw-semibold" asp-controller="Admin" asp-action="Login">
                             <i class="bi bi-lock me-1"></i>Admin
                         </a>
                     </li>
@@ -42,19 +51,67 @@
         </div>
     </nav>
 
+    <!-- CONTEÚDO DA PÁGINA -->
     <main>
         @RenderBody()
     </main>
 
-    <footer class="bg-dark text-white mt-5 py-4">
-        <div class="container text-center">
-            <p class="mb-1">
-                <i class="bi bi-book-half me-2"></i>
-                <strong>Biblioteca Municipal</strong>
-            </p>
-            <p class="mb-1 text-muted small">Rua das Letras, 123 — Centro</p>
-            <p class="mb-0 text-muted small">
-                &copy; @DateTime.Now.Year — Todos os direitos reservados
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white mt-5 py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5 class="text-warning fw-bold mb-3">
+                        <i class="bi bi-book-half me-2"></i>Biblioteca Municipal
+                    </h5>
+                    <p class="text-muted small">
+                        Um espaço dedicado ao conhecimento, cultura e aprendizado para toda a comunidade.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold mb-3">Links Rápidos</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-1">
+                            <a asp-controller="Home" asp-action="Index" class="text-muted text-decoration-none small">
+                                <i class="bi bi-chevron-right me-1"></i>Início
+                            </a>
+                        </li>
+                        <li class="mb-1">
+                            <a asp-controller="Home" asp-action="Sobre" class="text-muted text-decoration-none small">
+                                <i class="bi bi-chevron-right me-1"></i>Sobre
+                            </a>
+                        </li>
+                        <li class="mb-1">
+                            <a asp-controller="Home" asp-action="Acervo" class="text-muted text-decoration-none small">
+                                <i class="bi bi-chevron-right me-1"></i>Acervo
+                            </a>
+                        </li>
+                        <li class="mb-1">
+                            <a asp-controller="Home" asp-action="Contato" class="text-muted text-decoration-none small">
+                                <i class="bi bi-chevron-right me-1"></i>Contato
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold mb-3">Contato</h6>
+                    <p class="text-muted small mb-1">
+                        <i class="bi bi-geo-alt me-2 text-warning"></i>Rua das Letras, 123 — Centro
+                    </p>
+                    <p class="text-muted small mb-1">
+                        <i class="bi bi-telephone me-2 text-warning"></i>(61) 3333-4444
+                    </p>
+                    <p class="text-muted small mb-1">
+                        <i class="bi bi-envelope me-2 text-warning"></i>contato@bibliotecamunicipal.com.br
+                    </p>
+                    <p class="text-muted small">
+                        <i class="bi bi-clock me-2 text-warning"></i>Seg-Sex: 08h às 18h
+                    </p>
+                </div>
+            </div>
+            <hr class="border-secondary mt-4" />
+            <p class="text-center text-muted small mb-0">
+                &copy; @DateTime.Now.Year — Biblioteca Municipal. Todos os direitos reservados.
             </p>
         </div>
     </footer>
