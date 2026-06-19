@@ -10,7 +10,6 @@
 </head>
 <body>
 
-    <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold" asp-controller="Home" asp-action="Index">
@@ -51,66 +50,64 @@
         </div>
     </nav>
 
-    <!-- CONTEÚDO DA PÁGINA -->
     <main>
         @RenderBody()
     </main>
 
-    <!-- FOOTER -->
-    <footer class="bg-dark text-white mt-5 py-5">
+    <footer class="mt-5 py-5" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-top: 3px solid #ffc107;">
         <div class="container">
             <div class="row g-4">
                 <div class="col-md-4">
-                    <h5 class="text-warning fw-bold mb-3">
+                    <h5 class="fw-bold mb-3" style="color: #ffc107;">
                         <i class="bi bi-book-half me-2"></i>Biblioteca Municipal
                     </h5>
-                    <p class="text-muted small">
+                    <p class="small" style="color: #adb5bd;">
                         Um espaço dedicado ao conhecimento, cultura e aprendizado para toda a comunidade.
                     </p>
                 </div>
                 <div class="col-md-4">
-                    <h6 class="fw-bold mb-3">Links Rápidos</h6>
+                    <h6 class="fw-bold mb-3" style="color: #ffffff;">Links Rápidos</h6>
                     <ul class="list-unstyled">
                         <li class="mb-1">
-                            <a asp-controller="Home" asp-action="Index" class="text-muted text-decoration-none small">
+                            <a asp-controller="Home" asp-action="Index" class="text-decoration-none small" style="color: #adb5bd;">
                                 <i class="bi bi-chevron-right me-1"></i>Início
                             </a>
                         </li>
                         <li class="mb-1">
-                            <a asp-controller="Home" asp-action="Sobre" class="text-muted text-decoration-none small">
+                            <a asp-controller="Home" asp-action="Sobre" class="text-decoration-none small" style="color: #adb5bd;">
                                 <i class="bi bi-chevron-right me-1"></i>Sobre
                             </a>
                         </li>
                         <li class="mb-1">
-                            <a asp-controller="Home" asp-action="Acervo" class="text-muted text-decoration-none small">
+                            <a asp-controller="Home" asp-action="Acervo" class="text-decoration-none small" style="color: #adb5bd;">
                                 <i class="bi bi-chevron-right me-1"></i>Acervo
                             </a>
                         </li>
                         <li class="mb-1">
-                            <a asp-controller="Home" asp-action="Contato" class="text-muted text-decoration-none small">
+                            <a asp-controller="Home" asp-action="Contato" class="text-decoration-none small" style="color: #adb5bd;">
                                 <i class="bi bi-chevron-right me-1"></i>Contato
                             </a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <h6 class="fw-bold mb-3">Contato</h6>
-                    <p class="text-muted small mb-1">
-                        <i class="bi bi-geo-alt me-2 text-warning"></i>Rua das Letras, 123 — Centro
+                    <h6 class="fw-bold mb-3" style="color: #ffffff;">Contato</h6>
+                    <p class="small mb-1" style="color: #adb5bd;">
+                        <i class="bi bi-geo-alt me-2" style="color: #ffc107;"></i>Rua Getulio Vargas, 240 — Centro de Cidade Ocidental
                     </p>
-                    <p class="text-muted small mb-1">
-                        <i class="bi bi-telephone me-2 text-warning"></i>(61) 3333-4444
+                    <p class="small mb-1" style="color: #adb5bd;">
+                        <i class="bi bi-telephone me-2" style="color: #ffc107;"></i>(61) 98765-1234
                     </p>
-                    <p class="text-muted small mb-1">
-                        <i class="bi bi-envelope me-2 text-warning"></i>contato@bibliotecamunicipal.com.br
+                    <p class="small mb-1" style="color: #adb5bd;">
+                        <i class="bi bi-envelope me-2" style="color: #ffc107;"></i>contato@bibliotecamunicipal.com.br
                     </p>
-                    <p class="text-muted small">
-                        <i class="bi bi-clock me-2 text-warning"></i>Seg-Sex: 08h às 18h
+                    <p class="small" style="color: #adb5bd;">
+                        <i class="bi bi-clock me-2" style="color: #ffc107;"></i>Seg-Sex: 08h às 18h
                     </p>
                 </div>
             </div>
-            <hr class="border-secondary mt-4" />
-            <p class="text-center text-muted small mb-0">
+            <hr style="border-color: #444;" class="mt-4" />
+            <p class="text-center small mb-0" style="color: #adb5bd;">
                 &copy; @DateTime.Now.Year — Biblioteca Municipal. Todos os direitos reservados.
             </p>
         </div>

@@ -108,6 +108,24 @@ footer {
     border-top: 3px solid #ffc107;
 }
 
+    footer * {
+        color: #adb5bd !important;
+    }
+
+    footer h5,
+    footer h6 {
+        color: #ffffff !important;
+    }
+
+    footer .text-warning {
+        color: #ffc107 !important;
+    }
+
+    footer a:hover {
+        color: #ffc107 !important;
+        text-decoration: none !important;
+    }
+
 .alert {
     border-radius: 10px;
     border: none;
@@ -123,7 +141,6 @@ footer {
     background-color: #fee2e2;
     color: #991b1b;
 }
-
 
 body.bg-dark {
     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%) !important;
