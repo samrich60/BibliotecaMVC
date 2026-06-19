@@ -35,20 +35,35 @@ Sistema web desenvolvido com **ASP.NET Core MVC (C#)** para gerenciamento de ace
 ## 🗂️ Estrutura do Projeto
 
 BibliotecaMVC/
+
 ├── Controllers/
+
 │   ├── HomeController.cs      # Páginas públicas
+
 │   ├── AdminController.cs     # Login e dashboard
+
 │   └── LivrosController.cs    # CRUD de livros
+
 ├── Models/
+
 │   ├── Livro.cs               # Model de livro
+
 │   ├── Admin.cs               # Model de administrador
+
 │   └── BibliotecaContext.cs   # Contexto do banco
+
 ├── Views/
+
 │   ├── Home/                  # Views públicas
+
 │   ├── Admin/                 # Views administrativas
+
 │   ├── Livros/                # Views do CRUD
+
 │   └── Shared/                # Layout e parciais
+
 └── wwwroot/                   # Arquivos estáticos
+
 ---
 
 ## ▶️ Como Executar
