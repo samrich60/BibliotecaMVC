@@ -70,7 +70,7 @@ BibliotecaMVC/
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/SEU_USUARIO/BibliotecaMVC.git
+git clone https://github.com/samrich60/BibliotecaMVC.git
 ```
 
 2. Abra no Visual Studio 2022
