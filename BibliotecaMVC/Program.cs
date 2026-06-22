@@ -6,7 +6,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<BibliotecaContext>(options =>
     options.UseSqlite("Data Source=biblioteca.db"));
 
-// Habilita Session
 builder.Services.AddSession(options =>
 {
     options.IdleTimeout = TimeSpan.FromMinutes(30);
@@ -24,18 +23,12 @@ using (var scope = app.Services.CreateScope())
     db.Database.Migrate();
 }
 
-if (!app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Home/Error");
-    app.UseHsts();
-}
-
+app.UseExceptionHandler("/Home/Error");
+app.UseHsts();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthorization();
-
-// Ativa o uso de Session
 app.UseSession();
 
 app.MapControllerRoute(
