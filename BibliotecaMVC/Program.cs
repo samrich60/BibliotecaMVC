@@ -3,6 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+builder.WebHost.UseUrls($"http://+:{port}");
+
 builder.Services.AddDbContext<BibliotecaContext>(options =>
     options.UseSqlite("Data Source=biblioteca.db"));
 
@@ -24,8 +27,12 @@ using (var scope = app.Services.CreateScope())
 }
 
 app.UseExceptionHandler("/Home/Error");
-app.UseHsts();
-app.UseHttpsRedirection();
+
+if (Environment.GetEnvironmentVariable("RENDER") != "true")
+{
+    app.UseHsts();
+    app.UseHttpsRedirection();
+}
 app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthorization();
